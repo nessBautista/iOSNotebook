@@ -19,9 +19,10 @@ class MyUnitTestAppTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testTipCalc() {
+        let tc = TipCalc()
+        let tip = tc.calTip(amount: 128.51, tipPercentage: 50)
+        XCTAssertEqual(64.26, tip, accuracy:0.01, "tip was wrong for 50%")
     }
 
     func testPerformanceExample() {

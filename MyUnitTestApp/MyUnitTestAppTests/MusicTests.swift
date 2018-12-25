@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import MyUnitTestApp
 
 class MusicTests: XCTestCase {
 
@@ -18,11 +19,29 @@ class MusicTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testParseJSON() {
+        let music = Music()
+        let bundle = Bundle(for: type(of:self))
+        if let path = bundle.path(forResource: "JSON", ofType: "txt") {
+            if let data = try? Data.init(contentsOf: URL.init(fileURLWithPath: path)) {
+                let result = music.parseJson(data: data)
+                
+                XCTAssertNotNil(result!, "should not be nil")
+                XCTAssertGreaterThan(result!.count, 0, "should have values")
+            } else {
+                XCTFail()
+            }
+        } else {
+            XCTFail()
+        }
     }
 
+    func testRefresh() {
+        let music = MockMusic()
+        music.refresh()
+        XCTAssertNotNil(music.cache, "The cache should not be nil")
+        
+    }
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {

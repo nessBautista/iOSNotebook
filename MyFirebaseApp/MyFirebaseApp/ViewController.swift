@@ -21,6 +21,7 @@ class ViewController: UIViewController, FUIAuthDelegate {
     @IBOutlet weak var btnLogin: UIButton!
     
     var authUI: FUIAuth?
+    var ref : DatabaseReference?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,15 @@ class ViewController: UIViewController, FUIAuthDelegate {
         let providers: [FUIAuthProvider] = [FUIGoogleAuth()]
         //authUI?.isSignInWithEmailHidden = true
         authUI?.providers = providers
+        
+        ref = Database.database().reference()
+        
+        if Auth.auth().currentUser != nil {
+//            ref?.child("games").child("1").setValue(["name":"first-edited", "level":5])
+//            ref?.child("games/1/score").setValue(10)
+//            ref?.child("games/1/score").removeValue()
+            ref?.child("games").childByAutoId().setValue(["name":"second", "score":20])
+        }
     }
     
     func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {

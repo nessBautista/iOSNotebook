@@ -13,10 +13,21 @@
 		CC09E3C721C1997600D9EE0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC09E3C621C1997600D9EE0D /* Assets.xcassets */; };
 		CC09E3CA21C1997600D9EE0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC09E3C821C1997600D9EE0D /* LaunchScreen.storyboard */; };
 		CC09E3D521C1997600D9EE0D /* MyUnitTestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC09E3D421C1997600D9EE0D /* MyUnitTestAppTests.swift */; };
+		CC09E3E621C19A3000D9EE0D /* TipCalcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC09E3E521C19A3000D9EE0D /* TipCalcTests.swift */; };
+		CC09E3F021C1B85700D9EE0D /* MusicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC09E3EF21C1B85700D9EE0D /* MusicTests.swift */; };
+		CC09E3F221C1B8C300D9EE0D /* JSON.txt in Resources */ = {isa = PBXBuildFile; fileRef = CC09E3F121C1B8C300D9EE0D /* JSON.txt */; };
+		CC09E3F421C1BF3300D9EE0D /* MockMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC09E3F321C1BF3300D9EE0D /* MockMusic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		CC09E3D121C1997600D9EE0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC09E3B421C1997500D9EE0D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC09E3BB21C1997500D9EE0D;
+			remoteInfo = MyUnitTestApp;
+		};
+		CC09E3E821C19A3000D9EE0D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CC09E3B421C1997500D9EE0D /* Project object */;
 			proxyType = 1;
@@ -36,6 +47,12 @@
 		CC09E3D021C1997600D9EE0D /* MyUnitTestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyUnitTestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC09E3D421C1997600D9EE0D /* MyUnitTestAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUnitTestAppTests.swift; sourceTree = "<group>"; };
 		CC09E3D621C1997600D9EE0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC09E3E321C19A3000D9EE0D /* TipCalcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipCalcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC09E3E521C19A3000D9EE0D /* TipCalcTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCalcTests.swift; sourceTree = "<group>"; };
+		CC09E3E721C19A3000D9EE0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC09E3EF21C1B85700D9EE0D /* MusicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTests.swift; sourceTree = "<group>"; };
+		CC09E3F121C1B8C300D9EE0D /* JSON.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = JSON.txt; sourceTree = "<group>"; };
+		CC09E3F321C1BF3300D9EE0D /* MockMusic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMusic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +70,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CC09E3E021C19A3000D9EE0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -61,6 +85,7 @@
 			children = (
 				CC09E3BE21C1997500D9EE0D /* MyUnitTestApp */,
 				CC09E3D321C1997600D9EE0D /* MyUnitTestAppTests */,
+				CC09E3E421C19A3000D9EE0D /* TipCalcTests */,
 				CC09E3BD21C1997500D9EE0D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +95,7 @@
 			children = (
 				CC09E3BC21C1997500D9EE0D /* MyUnitTestApp.app */,
 				CC09E3D021C1997600D9EE0D /* MyUnitTestAppTests.xctest */,
+				CC09E3E321C19A3000D9EE0D /* TipCalcTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -91,9 +117,21 @@
 			isa = PBXGroup;
 			children = (
 				CC09E3D421C1997600D9EE0D /* MyUnitTestAppTests.swift */,
+				CC09E3EF21C1B85700D9EE0D /* MusicTests.swift */,
 				CC09E3D621C1997600D9EE0D /* Info.plist */,
+				CC09E3F121C1B8C300D9EE0D /* JSON.txt */,
+				CC09E3F321C1BF3300D9EE0D /* MockMusic.swift */,
 			);
 			path = MyUnitTestAppTests;
+			sourceTree = "<group>";
+		};
+		CC09E3E421C19A3000D9EE0D /* TipCalcTests */ = {
+			isa = PBXGroup;
+			children = (
+				CC09E3E521C19A3000D9EE0D /* TipCalcTests.swift */,
+				CC09E3E721C19A3000D9EE0D /* Info.plist */,
+			);
+			path = TipCalcTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,6 +172,24 @@
 			productReference = CC09E3D021C1997600D9EE0D /* MyUnitTestAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		CC09E3E221C19A3000D9EE0D /* TipCalcTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC09E3EA21C19A3000D9EE0D /* Build configuration list for PBXNativeTarget "TipCalcTests" */;
+			buildPhases = (
+				CC09E3DF21C19A3000D9EE0D /* Sources */,
+				CC09E3E021C19A3000D9EE0D /* Frameworks */,
+				CC09E3E121C19A3000D9EE0D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC09E3E921C19A3000D9EE0D /* PBXTargetDependency */,
+			);
+			name = TipCalcTests;
+			productName = TipCalcTests;
+			productReference = CC09E3E321C19A3000D9EE0D /* TipCalcTests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -148,6 +204,10 @@
 						CreatedOnToolsVersion = 10.1;
 					};
 					CC09E3CF21C1997600D9EE0D = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = CC09E3BB21C1997500D9EE0D;
+					};
+					CC09E3E221C19A3000D9EE0D = {
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = CC09E3BB21C1997500D9EE0D;
 					};
@@ -168,6 +228,7 @@
 			targets = (
 				CC09E3BB21C1997500D9EE0D /* MyUnitTestApp */,
 				CC09E3CF21C1997600D9EE0D /* MyUnitTestAppTests */,
+				CC09E3E221C19A3000D9EE0D /* TipCalcTests */,
 			);
 		};
 /* End PBXProject section */
@@ -184,6 +245,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		CC09E3CE21C1997600D9EE0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC09E3F221C1B8C300D9EE0D /* JSON.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC09E3E121C19A3000D9EE0D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -207,6 +276,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC09E3D521C1997600D9EE0D /* MyUnitTestAppTests.swift in Sources */,
+				CC09E3F021C1B85700D9EE0D /* MusicTests.swift in Sources */,
+				CC09E3F421C1BF3300D9EE0D /* MockMusic.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC09E3DF21C19A3000D9EE0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC09E3E621C19A3000D9EE0D /* TipCalcTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +296,11 @@
 			isa = PBXTargetDependency;
 			target = CC09E3BB21C1997500D9EE0D /* MyUnitTestApp */;
 			targetProxy = CC09E3D121C1997600D9EE0D /* PBXContainerItemProxy */;
+		};
+		CC09E3E921C19A3000D9EE0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC09E3BB21C1997500D9EE0D /* MyUnitTestApp */;
+			targetProxy = CC09E3E821C19A3000D9EE0D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -360,8 +444,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GQGZN6D9K9;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MyUnitTestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -369,6 +453,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = AppLab.MyUnitTestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -378,8 +463,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GQGZN6D9K9;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MyUnitTestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -387,6 +472,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = AppLab.MyUnitTestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -434,6 +520,44 @@
 			};
 			name = Release;
 		};
+		CC09E3EB21C19A3000D9EE0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GQGZN6D9K9;
+				INFOPLIST_FILE = TipCalcTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AppLab.TipCalcTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyUnitTestApp;
+			};
+			name = Debug;
+		};
+		CC09E3EC21C19A3000D9EE0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GQGZN6D9K9;
+				INFOPLIST_FILE = TipCalcTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AppLab.TipCalcTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyUnitTestApp;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -460,6 +584,15 @@
 			buildConfigurations = (
 				CC09E3DD21C1997600D9EE0D /* Debug */,
 				CC09E3DE21C1997600D9EE0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC09E3EA21C19A3000D9EE0D /* Build configuration list for PBXNativeTarget "TipCalcTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC09E3EB21C19A3000D9EE0D /* Debug */,
+				CC09E3EC21C19A3000D9EE0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -11,4 +11,5 @@ target 'MyFirebaseApp' do
   #pod 'FirebaseUI' #This one supports all
   pod 'FirebaseUI/Auth'
   pod 'FirebaseUI/Google'
+  pod 'FirebaseUI/Database'
 end
