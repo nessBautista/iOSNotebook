@@ -1,43 +1,7 @@
 import UIKit
 import Foundation
-//--------- PROTOCOL ANATOMY
-protocol BinaryRepresentable /* :AnyObject */ {
-    //the AnyObject forces to this protocol to be implemented by classes only
-    
-    var tag: String {get set}       //<--- Only vars can be defined.
-    var data: Data {get }           //<--- If you need a let, use a 'get' only
-    static var counter:Int {get}    //<--- available to all instances
-    
-    //if we defined a requirement for a method that modifies the instance
-    //its recommended to mark it with the keyword 'mutating'
-    //the mutating keyword allows to the value types also adopt the protocol
-    //value types(structs, enums, tuples)
-    mutating func update(data:Data)-> Bool  //<--- accepts methods
-    static func incrementCounter()          //<--- static methods can be accesed from any instance
 
-    init(tag: String, data: Data)   //<--- Allows initializer
-}
 
-struct TaggedData: BinaryRepresentable {
-    var tag: String
-    
-    var data: Data
-    
-    static var counter: Int = 0
-    
-    func update(data: Data) -> Bool {
-        return true
-    }
-    
-    static func incrementCounter() {
-        TaggedData.counter += 1
-    }
-    
-    init(tag: String, data: Data) {
-        self.tag = tag
-        self.data = data
-    }
-}
 
 
 //---------POLYMORPHISM
@@ -105,9 +69,18 @@ for shape in shapes {
 
 //---------EXAMPLE
 protocol Animatable {
+    var test:Int {get set}
     func pulse(duration: TimeInterval)
+    
+    init(test:Int, frame: CGRect)
 }
 extension Animatable where Self: UIView {
+    
+    init(test:Int, frame:CGRect){
+        self.init(frame: frame)
+        self.test = test
+    }
+    
     func pulse(duration: TimeInterval) {
         UIView.animate(withDuration: duration, animations: {
             self.alpha = 0
@@ -148,9 +121,17 @@ extension Borderable where Self: UIView {
 
 //Adopt the protocols
 class MyView: UIView, Animatable, Borderable {
+    var test: Int = 0
+    
+//    var test: Int = 0
+//    required init(test: Int, frame:CGRect) {
+//        super.init(frame: frame)
+//        self.test = 0
+//    }
+    
     
 }
-var myView = MyView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+var myView = MyView(test:0, frame: CGRect(x: 0, y: 0, width: 100, height: 100))
 myView.backgroundColor = .red
 myView.cornerRadius = 10
 myView.borderWidth = 1
